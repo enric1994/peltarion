@@ -1,0 +1,16 @@
+version: '2.3'
+
+services:
+
+  peltarion:
+    image: peltarion
+    container_name: peltarion
+    working_dir: /peltarion
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ../:/peltarion
+    command: tail /dev/null -f
