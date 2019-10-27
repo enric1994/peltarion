@@ -28,3 +28,5 @@ with open('/peltarion/data/train/image/output/index.csv', mode='w') as mywriter:
     masks = [f for f in listdir(mask_path) if isfile(join(mask_path, f))]
     for i, f in enumerate(images):
         mywriter.writerow(['image/{}'.format(f), 'mask/{}'.format(masks[i]), 'T'])
+
+#unlock heavy files move: ulimit -s 100000

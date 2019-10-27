@@ -24,7 +24,9 @@ def start(update, context):
     user = update.message.from_user
     print("User: %s", user.first_name)
     update.message.reply_text(
-        'Hello! Send the picture you want to analyze 👨‍⚕️')
+        'Hello! 👨‍⚕️ We use AI to detect early signs of skin cancer')
+    time.sleep(0.5)
+    update.message.reply_text('Please, upload a picture of your skin')
 
     return 'Photo'
 
@@ -32,7 +34,7 @@ def start(update, context):
 def photo(update, context):
 
     print('Getting picture...')
-    update.message.reply_text("Analyzing...")
+    update.message.reply_text("🔬 Analyzing...")
 
     user = update.message.from_user
     photo_file = update.message.photo[-1].get_file()
