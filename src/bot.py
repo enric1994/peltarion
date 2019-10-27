@@ -24,7 +24,7 @@ def start(update, context):
     user = update.message.from_user
     print("User: %s", user.first_name)
     update.message.reply_text(
-        'Hello! 👨‍⚕️ We use AI to detect early signs of skin cancer')
+        'Hello!👋 We use AI to detect early signs of skin cancer')
     time.sleep(0.5)
     update.message.reply_text('Please, upload a picture of your skin')
 
